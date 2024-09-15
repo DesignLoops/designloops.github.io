@@ -1,0 +1,393 @@
+/* Basic reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+/* WebKit browsers */
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 4px;
+    transition: background 0.3s ease-in-out; /* Smooth transition for track background */
+}
+
+::-webkit-scrollbar-thumb {
+    background: #00A5CF;
+    border-radius: 10px;
+    transition: background 0.3s ease-in-out; /* Smooth transition for thumb color */
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #006d88;
+}
+
+
+body {
+    font-family: "Kanit", sans-serif;
+    font-style: normal;
+    color: #000;
+}
+
+/* Centering the navbar */
+.navbar-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    top: 0px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1000;
+    width: 100%;
+}
+
+/* Navbar styles */
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 542px;  /* Fixed width */
+    height: 61px;  /* Fixed height */
+    padding: 10px 20px;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 28px;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    transition: color 0.3s ease-in-out;
+    z-index: 1000;
+}
+
+/* Logo styling */
+.logo {
+    width: 95px;  /* Fixed width */
+    height: 41px;  /* Fixed height */
+    position: relative;
+    top: 0.2rem;
+    transition: opacity 0.01s ease-in-out;
+    opacity: 1;
+}
+
+.logo_class {
+    padding: 10px 20px;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 28px;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    transition: color 0.0s ease-in-out;
+    z-index: 1000;
+    margin: 10px;
+}
+
+/* Navigation links styling */
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 58px; /* Space between links */
+    justify-content: center;
+    width: 100%;
+}
+
+/* Individual nav links */
+.nav-links a {
+    text-decoration: none;
+    font-size: 18px;
+    color: #000;
+    transition: color 0.3s ease-in-out;
+}
+
+/* Hover effect for links */
+.nav-links a:hover {
+    color: #00A5CF; /* Hover color */
+}
+
+/* Dropdown content for "Features" */
+.nav-links li {
+    position: relative;
+}
+
+.nav-links .dropdown-content {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: rgba(71, 71, 71, 0.9);
+    min-width: 120px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+    border-radius: 8px;
+}
+
+.nav-links .dropdown-content a {
+    display: block;
+    padding: 8px;
+    text-align: left;
+    color: #000;
+    text-decoration: none;
+}
+
+.nav-links .dropdown-content a:hover {
+    background-color: #868686;
+    border-radius: 8px;
+}
+
+.nav-links li:hover .dropdown-content {
+    display: block;
+    border-radius: 8px;
+}
+
+/* Dark and light mode styles */
+.navbar.dark {
+    color: #fff;
+}
+
+.navbar.dark a {
+    color: #fff;
+}
+
+.navbar.dark .logo img {
+    filter: invert(100%);
+}
+
+.navbar.light {
+    color: #000;
+}
+
+.navbar.light a {
+    color: #000;
+}
+
+.navbar.light .logo img {
+    filter: invert(0%);
+}
+
+/* Default state of links */
+.nav-links a {
+    color: #000; /* Black when on top of the page */
+    text-decoration: none;
+    transition: color 0.3s ease-in-out;
+}
+
+/* Hover state of links */
+.nav-links a:hover {
+    color: #00A5CF; /* Blue hover color */
+}
+
+/* Scrolling behavior does not affect the navbar background */
+.navbar {
+    background: rgba(255, 255, 255, 0.2); /* Fixed navbar background */
+    backdrop-filter: blur(10px);
+    transition: color 0.3s ease-in-out;
+}
+
+/* Hamburger menu (for mobile view) */
+.hamburger {
+    display: none;
+    cursor: pointer;
+}
+
+/* Styles for the lines in the hamburger menu */
+.hamburger .line {
+    width: 30px;
+    height: 4px;
+    background-color: #000;
+    margin: 5px;
+    border-radius: 8px;
+    transition: background-color 0.3s ease-in-out, transform 0.3s ease-in-out; /* Added transform transition */
+}
+
+.hamburger.active .line:nth-child(1) {
+    transform: rotate(-45deg) translate(-5px, 6px);
+}
+
+.hamburger.active .line:nth-child(2) {
+    opacity: 0;
+}
+
+.hamburger.active .line:nth-child(3) {
+    transform: rotate(45deg) translate(-5px, -6px);
+}
+
+/* Light mode */
+.navbar.light .hamburger .line {
+    background-color: #000; /* Black lines for light mode */
+}
+
+/* Dark mode */
+.navbar.dark .hamburger .line {
+    background-color: #fff; /* White lines for dark mode */
+}
+
+.hamburger.active .line:nth-child(1) {
+    transform: rotate(-45deg) translate(-5px, 6px);
+}
+
+.hamburger.active .line:nth-child(2) {
+    opacity: 0;
+}
+
+.hamburger.active .line:nth-child(3) {
+    transform: rotate(45deg) translate(-5px, -6px);
+}
+
+/* Mobile responsive styles */
+@media (max-width: 600px) {
+    .navbar {
+        justify-content: center;
+    }
+
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        background-color: rgba(78, 78, 78, 0.61);
+        position: absolute;
+        top: 70px;
+        right: 20px;
+        width: 150px;
+        border-radius: 8px;
+        padding: 10px 0;
+        z-index: 999;
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .nav-links li {
+        text-align: center;
+        width: 100%;
+    }
+
+    .hamburger {
+        display: block;
+    }
+}
+
+/* Base styling for sections */
+.background-section,
+.hero-section,
+.white-bg,
+.black-bg {
+    height: 700px;  /* Full width */
+    padding: 50px 0;  /* Padding for spacing */
+    text-align: center;  /* Center the text */
+    font-size: 11px;  /* Increase font size for headers */
+}
+
+/* White background section */
+.white-bg {
+    background-color: #fff; /* White background */
+    color: #000;  /* Black text */
+}
+
+/* Black background section */
+.black-bg {
+    background-color: #000; /* Black background */
+    color: #fff;  /* White text */
+}
+
+.hero-section {
+    position: relative; /* Ensure ::before works relative to this section */
+    background: radial-gradient(circle, rgba(0, 166, 207, 0.68) 1%, rgb(255, 255, 255) 60%, rgb(252, 252, 211) 100%);
+    height: 40rem; /* Adjust height as needed */
+    color: #000; /* Ensure text color contrasts well with background */
+    padding: 9rem 0; /* Add padding for spacing */
+    align-items: center; /* Centering content vertically */
+    justify-content: center; /* Centering content horizontally */
+    text-align: center; /* Centering text */
+    overflow: hidden; /* Ensure ::before content doesn’t overflow */
+    z-index: 1; /* Ensure content is above the background */
+    background-blend-mode: multiply; /* Blend background image and gradient */
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.hero-section {
+    animation: fadeIn 1s ease-out; /* Add fade-in animation */
+}
+
+.hero-section::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('/3d-design.png') no-repeat center center;
+    background-size: 400px; /* Adjust the size of the image */
+    z-index: 0; /* Ensure the background stays behind the content */
+    mix-blend-mode: lighten; /* Blend the image with the background */
+    opacity: 0.5; /* Apply transparency to only the background image */
+}
+.hero-section h1, .hero-section p {
+    position: relative; /* Ensure text is above the background image */
+    z-index: 2; /* Ensure text is always on top of the background */
+}
+
+.hero-section h1 {
+    font-size: 50px;
+    font-weight: bolder; /* Increase font size for larger headers */
+    max-width: 70%; /* Adjust max-width to control text width */
+    margin: 0 auto; /* Center the text within its container */
+}
+
+.hero-section p {
+    font-size: 18px;
+    color: #343A40;
+    max-width: 45%; /* Adjust max-width to control text width */
+    margin: 20px auto; /* Center the text within its container */
+}
+
+
+
+.services {
+    background-color: #000;
+    height: 400px;
+    color:white;
+}
+.buttons {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin: 3rem;
+    gap: 4rem;
+    
+}
+.hero-section button {
+    backdrop-filter: blur(10px); /* Applies the blur effect */
+    background-color: #00A5CF;
+    color: white;
+    padding: 10px 20px;
+    width: 160px;
+    height: 48px;
+    border-radius: 99px;
+    transition: background-color 0.2s ease-in-out;
+    font-size: large;
+    border: none;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+
+.hero-section button:hover {
+    background-color: #008B9E;
+}
+
+.hero-section .s-btn {
+    background-color: #edeffce1; 
+    color: #00A5CF;
+}
+
+.hero-section .s-btn:hover {
+    background-color: #d6dff6;
+}

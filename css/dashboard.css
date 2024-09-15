@@ -1,0 +1,72 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+header {
+    background-color: #004E64;
+    padding: 10px;
+    text-align: center;
+    color: white;
+}
+
+header nav a {
+    color: white;
+    margin: 0 15px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+section {
+    padding: 20px;
+    margin: 20px 0;
+}
+
+#analytics, #blog-upload {
+    background-color: #7FFFD4;
+    padding: 20px;
+    margin: 20px 0;
+}
+
+h2 {
+    color: #004E64;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+form label {
+    margin: 10px 0 5px;
+}
+
+form input, form textarea {
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #004E64;
+    border-radius: 5px;
+}
+
+form button {
+    background-color: #004E64;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+form button:hover {
+    background-color: #25A18E;
+}
+
+@media (max-width: 768px) {
+    header nav a {
+        display: block;
+        margin: 5px 0;
+    }
+}
