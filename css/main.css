@@ -360,13 +360,8 @@ body {
 
 
 
-.services {
-    background-color: #000;
-    height: 400px;
-    color:white;
-    border-top-left-radius: 28px;
-    border-top-right-radius: 28px;
-}
+
+  
 .buttons {
     display: flex;
     justify-content: center;
@@ -416,6 +411,129 @@ button i {
 button:hover i {
     transform: translateX(6px); /* Move icon to the right on hover */
 }
+
+
+
+
+#features {
+    padding: 2rem;
+    background-color: #000000;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+  }
+  
+  #features h2 {
+    text-align: center;
+    margin-bottom: 1.5rem;
+    color: #00a8d6;
+    background-color: #343A40;
+    border-radius: 8px;
+  }
+  
+  .features-container {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 1rem 0;
+    gap: 1.7rem;
+    justify-content: center;
+  }
+  
+  .feature-card {
+    background: rgb(23, 26, 27);
+    border-radius: 8px;
+    padding: 1rem;
+    transition: background-color 0.3s ease;
+    flex: 1 1 calc(33% - 1rem);
+    box-sizing: border-box;
+    text-align: center;
+    color: white;
+    cursor: pointer;
+    height: 300px;
+
+    &:hover {
+      background-color: #005270;
+    }
+  }
+  
+  .feature-icon {
+    margin-bottom: 1rem;
+  }
+  
+  .feature-icon img {
+    width: 100px;
+    height: 100px;
+  }
+  
+  .feature-card h3 {
+    margin: 0.5rem 0;
+    font-size: 1.25rem;
+    color: #00a9d8;
+  }
+  
+
+  .feature-card p {
+    color: #fdfdfd;
+  }
+
+
+  
+  #our-work {
+    padding: 2rem;
+    background-color: #ffffff;
+  }
+  
+  #our-work h2 {
+    text-align: center;
+    margin-bottom: 1.5rem;
+    color: #004E64;
+  }
+  
+  .work-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.7rem;
+    justify-content: center;
+  }
+  
+  .work-item {
+    background: #f9f9f9;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    flex: 1 1 calc(33% - 1rem);
+    box-sizing: border-box;
+    text-align: center;
+    cursor: pointer;
+    height: 400px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .work-item:hover {
+    transform: scale(1.02);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  }
+  .work-item img {
+    width: 410px;
+    height: 240px;
+    display: block;
+  }
+  
+  .work-info {
+    padding: 1rem;
+  }
+  
+  .work-info h3 {
+    margin: 0.5rem 0;
+    font-size: 1.25rem;
+    color: #004E64;
+  }
+  
+  .work-info p {
+    color: #333;
+  }
+  
+
+
 
 footer {
     background-color: #004E64;
