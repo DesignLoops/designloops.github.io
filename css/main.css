@@ -38,7 +38,7 @@ body {
     align-items: center;
     justify-content: center;
     position: fixed;
-    top: 0px;
+    top: 1rem;
     left: 50%;
     transform: translateX(-50%);
     z-index: 1000;
@@ -108,17 +108,22 @@ body {
 .nav-links li {
     position: relative;
 }
-
+.nav-links .dropdown-content li {
+    position: relative;
+    top: 0.8rem;
+}
 .nav-links .dropdown-content {
     display: none;
     position: absolute;
-    top: 100%;
+    top: 165%;
     left: 0;
-    background-color: rgba(71, 71, 71, 0.9);
-    min-width: 120px;
+    background: rgba(255, 255, 255, 0.466);
+    backdrop-filter: blur(20px);
+    min-width: 140px;
+    height: 160px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     z-index: 1;
-    border-radius: 8px;
+    list-style: none;
 }
 
 .nav-links .dropdown-content a {
@@ -130,8 +135,7 @@ body {
 }
 
 .nav-links .dropdown-content a:hover {
-    background-color: #868686;
-    border-radius: 8px;
+    background-color: #ffffffc0;
 }
 
 .nav-links li:hover .dropdown-content {
@@ -242,7 +246,9 @@ body {
     .nav-links {
         display: none;
         flex-direction: column;
-        background-color: rgba(78, 78, 78, 0.61);
+        background: rgba(255, 255, 255, 0.466);
+        backdrop-filter: blur(20px);
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
         position: absolute;
         top: 70px;
         right: 20px;
@@ -292,9 +298,9 @@ body {
 .hero-section {
     position: relative; /* Ensure ::before works relative to this section */
     background: radial-gradient(circle, rgba(0, 166, 207, 0.68) 1%, rgb(255, 255, 255) 60%, rgb(252, 252, 211) 100%);
-    height: 40rem; /* Adjust height as needed */
+    height: 41rem; /* Adjust height as needed */
     color: #000; /* Ensure text color contrasts well with background */
-    padding: 9rem 0; /* Add padding for spacing */
+    padding: 8rem 0; /* Add padding for spacing */
     align-items: center; /* Centering content vertically */
     justify-content: center; /* Centering content horizontally */
     text-align: center; /* Centering text */
@@ -329,22 +335,26 @@ body {
     mix-blend-mode: lighten; /* Blend the image with the background */
     opacity: 0.5; /* Apply transparency to only the background image */
 }
+.hero-section h1, .hero-section p, .buttons {
+    position: relative;
+    top: 1.7rem; /* Add spacing between elements */
+}
 .hero-section h1, .hero-section p {
     position: relative; /* Ensure text is above the background image */
     z-index: 2; /* Ensure text is always on top of the background */
 }
 
 .hero-section h1 {
-    font-size: 50px;
+    font-size: 60px;
     font-weight: bolder; /* Increase font size for larger headers */
-    max-width: 70%; /* Adjust max-width to control text width */
+    max-width: 50%; /* Adjust max-width to control text width */
     margin: 0 auto; /* Center the text within its container */
 }
 
 .hero-section p {
     font-size: 18px;
     color: #343A40;
-    max-width: 45%; /* Adjust max-width to control text width */
+    max-width: 40%; /* Adjust max-width to control text width */
     margin: 20px auto; /* Center the text within its container */
 }
 
@@ -354,6 +364,8 @@ body {
     background-color: #000;
     height: 400px;
     color:white;
+    border-top-left-radius: 28px;
+    border-top-right-radius: 28px;
 }
 .buttons {
     display: flex;
@@ -383,11 +395,54 @@ body {
     background-color: #008B9E;
 }
 
+
 .hero-section .s-btn {
-    background-color: #edeffce1; 
-    color: #00A5CF;
+    background-color: #ffffff00;
+    border-style:double;
+    border-color: #00A5CF;
+    color: #000000;
+    width: auto;
 }
 
 .hero-section .s-btn:hover {
-    background-color: #d6dff6;
+    color: #00A5CF;
+    background-color: #ffffff;
+}
+
+button i {
+    transition: transform 0.3s ease; /* Icon hover transition */
+}
+
+button:hover i {
+    transform: translateX(6px); /* Move icon to the right on hover */
+}
+
+footer {
+    background-color: #004E64;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+}
+
+.footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.footer-container p {
+    margin: 0;
+}
+
+.footer-social {
+    margin-top: 10px;
+}
+
+.footer-social a {
+    color: #7FFFD4;
+    text-decoration: none;
+    margin: 0 10px;
+}
+
+.footer-social a:hover {
+    text-decoration: underline;
 }
