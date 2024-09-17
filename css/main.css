@@ -365,7 +365,8 @@ body {
 }
 
 /* Mobile responsive styles */
-@media (max-width: 600px) 
+@media (max-width: 600px) {
+
     .navbar {
         justify-content: center;
     }
@@ -397,7 +398,7 @@ body {
     .hamburger {
         display: block;
     }
-
+}
       
 /* Base styling for sections */
 .background-section,
