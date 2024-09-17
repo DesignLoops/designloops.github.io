@@ -52,3 +52,39 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     }
 });
+
+window.addEventListener('load', function() {
+    let loadingScreen = document.getElementById('loading-screen');
+    
+    // Add a delay to ensure content is fully loaded before fading out
+    setTimeout(function() {
+      loadingScreen.style.opacity = '0';
+      // Wait for the opacity transition to finish before hiding
+      setTimeout(function() {
+        loadingScreen.style.display = 'none';
+      }, 1000); // Match the duration of the opacity transition
+    }, 500); // Adjust this delay if needed
+  });
+  
+  document.addEventListener('DOMContentLoaded', function() {
+    const cards = document.querySelectorAll('.card-hidden');
+
+    function handleScroll() {
+        cards.forEach(card => {
+            const cardTop = card.getBoundingClientRect().top;
+            const viewportHeight = window.innerHeight;
+
+            if (cardTop < viewportHeight - 100) { // Adjust the 100 value as needed
+                card.classList.add('card-visible');
+            } else {
+                card.classList.remove('card-visible');
+            }
+        });
+    }
+
+    // Initial check
+    handleScroll();
+
+    // Add scroll event listener
+    window.addEventListener('scroll', handleScroll);
+});
