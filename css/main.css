@@ -381,7 +381,9 @@ body {
         justify-content: center;
         width: 9rem;
     }
-
+    .navbar.light a {
+        color: white;
+    }
     .nav-links .dropdown-content {
         background: rgba(97, 97, 97, 0.863);
     }
